@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>진호의 실험실</title>
+    <meta name="title" content="진호의 실험실">
+    <meta name="subject" content="강아지 고양이 분류기!">
+    <meta name="keywords" content="강아지, 멍멍이, 댕댕이, 고양이, 냥이, 인공지능 강아지 고양이 분류기">
+    <meta name="description" content="진호의 실험실 공부겸 만들어본 강아지 고양이 분류기입니다! 사진 데이터는 그 어디에도 전송되지 않습니다. ">
+    <meta name="author" content="김진호">
+    <!-- <link rel="stylesheet" href="../static/layout.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <!-- <link rel="canonical" href="https://kimjinho1.github.io/JinhoLab/" />
+    <meta property="og:url" content="https://kimjinho1.github.io/JinhoLab/" /> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="강아지 고양이 분류기" />
+    <meta property="og:description" content="공부겸 만들어본 강아지 고양이 분류기입니다! 사진 데이터는 그 어디에도 전송되지 않습니다. " />
+    <meta property="og:image" content="http://www.animaltogether.com/news/photo/201907/132_632_3752.jpg" />
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="naver-site-verification" content="385e99c89bf2ab937c0ef0748f6182800517a6d7" />
+</head>
+
+<body>
+    <nav class="p-3 container navbar navbar-expand-lg navbar-light">
+        <!-- <a class="navbar-brand" href="index.html">진호의 실험실</a> -->
+        <a class="navbar-brand" href="{{ url_for('home') }}">진호의 실험실</a>
+        <ul class="navbar-nav">
+            <li class="nav-item active dog_cat">
+                <a class="nav-link" href="{{ url_for('dog_cat') }}">강아지 고양이 분류기</a>
+            </li>
+            <li class="nav-item active update">
+                <a class="nav-link" href="{{ url_for('animal_face') }}">동물상 테스트</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    {% block content %} {% endblock %}
+
+
+    <div class="container-fluid text-center bottom-container">
+        <footer>
+            <br>
+            <table class="footer_table" align="center">
+
+                <tr>
+                    <td class="footer-txt">ABOUT</td>
+                    <td class="footer-txt">CONTACT</td>
+                    <td class="footer-txt">ADDRESS</td>
+                </tr>
+
+                <tr>
+                    <td><img class="footer-logo" src="../static/img/github-logo.png" onclick="location.href='https://github.com/kimjinho1/'">
+                    </td>
+                    <td>Jinho Kim</td>
+                    <td>Korea</td>
+                </tr>
+
+                <tr>
+                    <td><img class="footer-logo" src="../static/img/linkedin-logo.png" onclick="location.href='https://www.linkedin.com/in/jinho-kim-a08452191/'"></td>
+                    <td class="email">dlfhgk62@gmail.com</td>
+                    <td>Seoul</td>
+                </tr>
+
+                <tr>
+                    <td>&nbsp</td>
+                </tr>
+
+                <tr>
+                    <td class="copy" colspan="3">
+                        <p>&copy; 진호 JinhoKim 2020. All Rights Reserved. </p>
+                    </td>
+                </tr>
+
+            </table>
+        </footer>
+    </div>
+
+</body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+gender toggle
+Copyright (c) 2020 by Mert Cukuren (https://codepen.io/knyttneve/pen/bPpEZY)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+
+</html>
